@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 9d4ffbae1d4024d4d8d9b84337c400c3
+timeCreated: 1443992984
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Unlock: {instanceID: 0}
+  - Smoke: {instanceID: 0}
+  - DeathEffect: {instanceID: 0}
+  - Explosion: {instanceID: 0}
+  - Reticle: {fileID: 126948, guid: 02962a8ae7f7d3e4ca932ba7c3133d3a, type: 2}
+  - BOSS: {instanceID: 0}
+  - droneDestroyerBehaviour: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
