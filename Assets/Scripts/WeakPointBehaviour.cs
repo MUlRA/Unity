@@ -13,7 +13,6 @@ public class WeakPointBehaviour : MonoBehaviour
 	public GameObject Reticle;
 	public string collisionTag = "PlayerBullets";
 	public GameObject BOSS;
-	public HealthNBoosterManager Player;
 	public DroneDestroyerBehaviour droneDestroyerBehaviour;
 	private GameObject go;
 	private GameObject HeadsUp;
@@ -44,6 +43,7 @@ public class WeakPointBehaviour : MonoBehaviour
 					Instantiate (DeathEffect, col.ClosestPointOnBounds (transform.position), Quaternion.identity);
 					GameObject go = Instantiate (Smoke, transform.position, Quaternion.identity) as GameObject; 
 					go.transform.parent = BOSS.transform;
+					HealthNBoosterManager.Instance.isCutscene = true;
 					HeadsUp.SetActive (false);
 					Reticle.SetActive (false);
 					Invoke ("Death", 3f);
@@ -60,7 +60,7 @@ public class WeakPointBehaviour : MonoBehaviour
 	{
 		Destroyer.isKinematic = false;
 		//pushdown
-		Destroyer.AddForce(BOSS.transform.up*-100,ForceMode.VelocityChange);
+		Destroyer.AddForce(BOSS.transform.up*-500,ForceMode.VelocityChange);
 		Destroyer.AddTorque(BOSS.transform.forward*5f,ForceMode.Acceleration);
 		Invoke ("Explode",4f);
 		

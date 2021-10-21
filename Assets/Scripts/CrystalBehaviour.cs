@@ -27,7 +27,7 @@ public class CrystalBehaviour: MonoBehaviour
 	{
 				foreach (string tag in Tags) {
 						if (col.tag == "PlayerBullets") {
-								Health -= 1.0f;
+				Health -= HealthNBoosterManager.Instance.Power;
 								if (Health <= 0) {
 										//Death animation
 										Invoke ("Death", 0);

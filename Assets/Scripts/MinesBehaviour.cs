@@ -32,7 +32,7 @@ public class MinesBehaviour : MonoBehaviour
 		{
 			if(col.tag == tag)
 			{
-				Health -= 1.0f;
+				Health -= HealthNBoosterManager.Instance.Power;
 				if (Health <= 0)
 				{
 					//Death animation

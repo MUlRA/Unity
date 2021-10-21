@@ -26,6 +26,7 @@ public class HealthNBoosterManager : MonoBehaviour
 	}
 	public string healthDisplayTag = "Health";
 	public string staminaDisplayTag = "Stamina|Mana";
+	public float Power = 1;
 	public float maxHealth = 1;
 	public float currentHealth;
 	public float maxStamina = 10.0f;
@@ -66,6 +67,7 @@ public class HealthNBoosterManager : MonoBehaviour
 		ship = player.GetComponent<Rigidbody> ();
 		currentHealth = maxHealth;
 		currentStamina = maxStamina;
+		isCutscene = false;
 		healthDisplay = GameObject.FindGameObjectWithTag(healthDisplayTag).transform;
 		staminaDisplay = GameObject.FindGameObjectWithTag(staminaDisplayTag).transform;
 		healthOriginalYscale = healthDisplay.localScale.y; 

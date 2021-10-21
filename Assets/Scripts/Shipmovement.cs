@@ -34,6 +34,7 @@ public class Shipmovement : MonoBehaviour
 	public float velocity = 10.0f;
 	public float BankLag = 1.0f;
 	public GameObject SmokeTrail;
+	public int LoadoutModifier;
 	private float bombAmount = -1.0f;
 
 
