@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: f5c0bcb86a9c22c43a0d2931a275688e
+timeCreated: 1443069474
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BodyCTRL
+    100002: distanceDimension1
+    100004: ElbowCTRL1
+    100006: ElbowCTRL2
+    100008: ElbowCTRL3
+    100010: ElbowCTRL4
+    100012: Head
+    100014: HeadBlades
+    100016: HeadCTRL
+    100018: IKhandle
+    100020: ikHandle11
+    100022: ikHandle12
+    100024: ikHandle13
+    100026: ikHandle6
+    100028: ikHandle9
+    100030: joint21
+    100032: joint22
+    100034: joint23
+    100036: joint24
+    100038: joint41
+    100040: joint42
+    100042: joint43
+    100044: joint44
+    100046: joint53
+    100048: joint54
+    100050: joint55
+    100052: joint56
+    100054: joint57
+    100056: joint58
+    100058: joint59
+    100060: joint60
+    100062: joint61
+    100064: joint62
+    100066: joint63
+    100068: joint64
+    100070: LeftCTRL
+    100072: locator1
+    100074: locator2
+    100076: //RootNode
+    100078: MasterNode
+    100080: Micro_V3:group1
+    100082: Micro_V3:pCube2
+    100084: Micro_V3:pCube3
+    100086: Micro_V3:polySurface11
+    100088: Micro_V3:polySurface12
+    100090: Micro_V3:polySurface13
+    100092: Micro_V3:polySurface14
+    100094: Micro_V3:polySurface5
+    100096: Micro_V3:pPlane1
+    100098: Micro_V3:RBlaster
+    100100: Micro_V4:Beam
+    100102: Micro_V4:Frame
+    100104: Micro_V4:joint6
+    100106: Micro_V4:LBlaster
+    100108: Micro_V4:Leg1
+    100110: Micro_V4:Leg3
+    100112: Micro_V4:Leg4
+    100114: Micro_V4:Leg5
+    100116: Micro_V4:Legs
+    100118: Micro_V4:Main_Frame
+    100120: Micro_V4:Micro
+    100122: Micro_V4:Micro_Mesh
+    100124: Micro_V4:Neck
+    100126: Micro_V4:Neck1
+    100128: Micro_V4:polySurface10
+    100130: Micro_V4:polySurface20
+    100132: Micro_V4:polySurface20 1
+    100134: Micro_V4:polySurface20 2
+    100136: Micro_V4:polySurface20 3
+    100138: Micro_V4:polySurface21
+    100140: Micro_V4:polySurface21 1
+    100142: Micro_V4:polySurface21 2
+    100144: Micro_V4:polySurface21 3
+    100146: Micro_V4:polySurface22
+    100148: Micro_V4:polySurface22 1
+    100150: Micro_V4:polySurface22 2
+    100152: Micro_V4:polySurface22 3
+    100154: Micro_V4:polySurface23
+    100156: Micro_V4:polySurface23 1
+    100158: Micro_V4:polySurface23 2
+    100160: Micro_V4:polySurface23 3
+    100162: Micro_V4:polySurface24
+    100164: Micro_V4:polySurface24 1
+    100166: Micro_V4:polySurface24 2
+    100168: Micro_V4:polySurface24 3
+    100170: Micro_V4:polySurface8
+    100172: Micro_V4:polySurface9
+    100174: Micro_V4:Pouch2
+    100176: Micro_V4:RBlaster
+    100178: Micro_V4:Reactor
+    100180: Micro_V4:Root
+    100182: Micro_V4:Saddle
+    100184: Micro_V4:SFX
+    100186: Micro_V4:Shoulder
+    100188: Micro_V4:Shoulder 1
+    100190: Micro_V4:Shoulder 2
+    100192: Micro_V4:Shoulder 3
+    100194: Micro_V4:Skeleton
+    100196: nurbsCircle10
+    100198: nurbsCircle11
+    100200: nurbsCircle12
+    100202: nurbsCircle13
+    100204: nurbsCircle14
+    100206: nurbsCircle15
+    100208: nurbsCircle16
+    100210: nurbsCircle17
+    100212: nurbsCircle18
+    100214: nurbsCircle19
+    100216: nurbsCircle20
+    100218: nurbsCircle21
+    100220: nurbsCircle22
+    100222: nurbsCircle7
+    100224: nurbsCircle8
+    100226: nurbsCircle9
+    100228: RightCTRL
+    100230: StretchMultiDividesetup
+    100232: transform3
+    100234: transform4
+    100236: transform6
+    400000: BodyCTRL
+    400002: distanceDimension1
+    400004: ElbowCTRL1
+    400006: ElbowCTRL2
+    400008: ElbowCTRL3
+    400010: ElbowCTRL4
+    400012: Head
+    400014: HeadBlades
+    400016: HeadCTRL
+    400018: IKhandle
+    400020: ikHandle11
+    400022: ikHandle12
+    400024: ikHandle13
+    400026: ikHandle6
+    400028: ikHandle9
+    400030: joint21
+    400032: joint22
+    400034: joint23
+    400036: joint24
+    400038: joint41
+    400040: joint42
+    400042: joint43
+    400044: joint44
+    400046: joint53
+    400048: joint54
+    400050: joint55
+    400052: joint56
+    400054: joint57
+    400056: joint58
+    400058: joint59
+    400060: joint60
+    400062: joint61
+    400064: joint62
+    400066: joint63
+    400068: joint64
+    400070: LeftCTRL
+    400072: locator1
+    400074: locator2
+    400076: //RootNode
+    400078: MasterNode
+    400080: Micro_V3:group1
+    400082: Micro_V3:pCube2
+    400084: Micro_V3:pCube3
+    400086: Micro_V3:polySurface11
+    400088: Micro_V3:polySurface12
+    400090: Micro_V3:polySurface13
+    400092: Micro_V3:polySurface14
+    400094: Micro_V3:polySurface5
+    400096: Micro_V3:pPlane1
+    400098: Micro_V3:RBlaster
+    400100: Micro_V4:Beam
+    400102: Micro_V4:Frame
+    400104: Micro_V4:joint6
+    400106: Micro_V4:LBlaster
+    400108: Micro_V4:Leg1
+    400110: Micro_V4:Leg3
+    400112: Micro_V4:Leg4
+    400114: Micro_V4:Leg5
+    400116: Micro_V4:Legs
+    400118: Micro_V4:Main_Frame
+    400120: Micro_V4:Micro
+    400122: Micro_V4:Micro_Mesh
+    400124: Micro_V4:Neck
+    400126: Micro_V4:Neck1
+    400128: Micro_V4:polySurface10
+    400130: Micro_V4:polySurface20
+    400132: Micro_V4:polySurface20 1
+    400134: Micro_V4:polySurface20 2
+    400136: Micro_V4:polySurface20 3
+    400138: Micro_V4:polySurface21
+    400140: Micro_V4:polySurface21 1
+    400142: Micro_V4:polySurface21 2
+    400144: Micro_V4:polySurface21 3
+    400146: Micro_V4:polySurface22
+    400148: Micro_V4:polySurface22 1
+    400150: Micro_V4:polySurface22 2
+    400152: Micro_V4:polySurface22 3
+    400154: Micro_V4:polySurface23
+    400156: Micro_V4:polySurface23 1
+    400158: Micro_V4:polySurface23 2
+    400160: Micro_V4:polySurface23 3
+    400162: Micro_V4:polySurface24
+    400164: Micro_V4:polySurface24 1
+    400166: Micro_V4:polySurface24 2
+    400168: Micro_V4:polySurface24 3
+    400170: Micro_V4:polySurface8
+    400172: Micro_V4:polySurface9
+    400174: Micro_V4:Pouch2
+    400176: Micro_V4:RBlaster
+    400178: Micro_V4:Reactor
+    400180: Micro_V4:Root
+    400182: Micro_V4:Saddle
+    400184: Micro_V4:SFX
+    400186: Micro_V4:Shoulder
+    400188: Micro_V4:Shoulder 1
+    400190: Micro_V4:Shoulder 2
+    400192: Micro_V4:Shoulder 3
+    400194: Micro_V4:Skeleton
+    400196: nurbsCircle10
+    400198: nurbsCircle11
+    400200: nurbsCircle12
+    400202: nurbsCircle13
+    400204: nurbsCircle14
+    400206: nurbsCircle15
+    400208: nurbsCircle16
+    400210: nurbsCircle17
+    400212: nurbsCircle18
+    400214: nurbsCircle19
+    400216: nurbsCircle20
+    400218: nurbsCircle21
+    400220: nurbsCircle22
+    400222: nurbsCircle7
+    400224: nurbsCircle8
+    400226: nurbsCircle9
+    400228: RightCTRL
+    400230: StretchMultiDividesetup
+    400232: transform3
+    400234: transform4
+    400236: transform6
+    2300000: Head
+    2300002: Micro_V3:polySurface11
+    2300004: Micro_V3:polySurface5
+    2300006: Micro_V3:RBlaster
+    2300008: Micro_V4:Beam
+    2300010: Micro_V4:LBlaster
+    2300012: Micro_V4:RBlaster
+    3300000: Head
+    3300002: Micro_V3:polySurface11
+    3300004: Micro_V3:polySurface5
+    3300006: Micro_V3:RBlaster
+    3300008: Micro_V4:Beam
+    3300010: Micro_V4:LBlaster
+    3300012: Micro_V4:RBlaster
+    4300000: Micro_V4:Beam
+    4300002: Micro_V4:Frame
+    4300004: Micro_V4:Neck
+    4300006: Micro_V4:Neck1
+    4300008: Micro_V4:Reactor
+    4300010: Micro_V4:Shoulder
+    4300012: Micro_V4:polySurface20
+    4300014: Micro_V4:polySurface21
+    4300016: Micro_V4:polySurface24
+    4300018: Micro_V4:polySurface23
+    4300020: Micro_V4:polySurface22
+    4300022: Micro_V4:Shoulder
+    4300024: Micro_V4:polySurface20
+    4300026: Micro_V4:polySurface21
+    4300028: Micro_V4:polySurface24
+    4300030: Micro_V4:polySurface23
+    4300032: Micro_V4:polySurface22
+    4300034: Micro_V4:Shoulder
+    4300036: Micro_V4:polySurface20
+    4300038: Micro_V4:polySurface21
+    4300040: Micro_V4:polySurface24
+    4300042: Micro_V4:polySurface23
+    4300044: Micro_V4:polySurface22
+    4300046: Micro_V4:Shoulder
+    4300048: Micro_V4:polySurface20
+    4300050: Micro_V4:polySurface21
+    4300052: Micro_V4:polySurface24
+    4300054: Micro_V4:polySurface23
+    4300056: Micro_V4:polySurface22
+    4300058: Micro_V4:Pouch2
+    4300060: Micro_V4:polySurface8
+    4300062: Micro_V4:polySurface9
+    4300064: Micro_V4:polySurface10
+    4300066: Micro_V3:pCube2
+    4300068: Micro_V3:pCube3
+    4300070: Micro_V3:polySurface12
+    4300072: Micro_V3:polySurface13
+    4300074: Micro_V3:polySurface14
+    4300076: Micro_V3:pPlane1
+    4300078: Micro_V4:LBlaster
+    4300080: Micro_V4:RBlaster
+    4300082: Head
+    4300084: Micro_V3:polySurface5
+    4300086: Micro_V3:polySurface11
+    4300088: Micro_V3:RBlaster
+    9500000: //RootNode
+    13700000: Micro_V3:pCube2
+    13700002: Micro_V3:pCube3
+    13700004: Micro_V3:polySurface12
+    13700006: Micro_V3:polySurface13
+    13700008: Micro_V3:polySurface14
+    13700010: Micro_V3:pPlane1
+    13700012: Micro_V4:Frame
+    13700014: Micro_V4:Neck
+    13700016: Micro_V4:Neck1
+    13700018: Micro_V4:polySurface10
+    13700020: Micro_V4:polySurface20
+    13700022: Micro_V4:polySurface20 1
+    13700024: Micro_V4:polySurface20 2
+    13700026: Micro_V4:polySurface20 3
+    13700028: Micro_V4:polySurface21
+    13700030: Micro_V4:polySurface21 1
+    13700032: Micro_V4:polySurface21 2
+    13700034: Micro_V4:polySurface21 3
+    13700036: Micro_V4:polySurface22
+    13700038: Micro_V4:polySurface22 1
+    13700040: Micro_V4:polySurface22 2
+    13700042: Micro_V4:polySurface22 3
+    13700044: Micro_V4:polySurface23
+    13700046: Micro_V4:polySurface23 1
+    13700048: Micro_V4:polySurface23 2
+    13700050: Micro_V4:polySurface23 3
+    13700052: Micro_V4:polySurface24
+    13700054: Micro_V4:polySurface24 1
+    13700056: Micro_V4:polySurface24 2
+    13700058: Micro_V4:polySurface24 3
+    13700060: Micro_V4:polySurface8
+    13700062: Micro_V4:polySurface9
+    13700064: Micro_V4:Pouch2
+    13700066: Micro_V4:Reactor
+    13700068: Micro_V4:Shoulder
+    13700070: Micro_V4:Shoulder 1
+    13700072: Micro_V4:Shoulder 2
+    13700074: Micro_V4:Shoulder 3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: MasterNode
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
