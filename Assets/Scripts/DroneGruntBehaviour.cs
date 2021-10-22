@@ -54,7 +54,7 @@ public class DroneGruntBehaviour : MonoBehaviour
 		{
 			if(col.tag == tag)
 			{
-				Health -= HealthNBoosterManager.Instance.Power;
+				Health -= WeaponAndAccessories.Instance.Power;
 
 					if (Health <= 0)
 				{

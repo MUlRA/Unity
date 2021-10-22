@@ -36,7 +36,7 @@ public class WeakPointBehaviour : MonoBehaviour
 			Instantiate (Unlock, transform.position, Quaternion.identity);
 			if (col.tag == collisionTag) 
 			{
-				currentHealth -= 1.0f;
+				currentHealth -= WeaponAndAccessories.Instance.Power;
 				if (currentHealth <= 0) 
 				{
 					droneDestroyerBehaviour.enabled = false;
@@ -60,7 +60,7 @@ public class WeakPointBehaviour : MonoBehaviour
 	{
 		Destroyer.isKinematic = false;
 		//pushdown
-		Destroyer.AddForce(BOSS.transform.up*-500,ForceMode.VelocityChange);
+		Destroyer.AddForce(BOSS.transform.up*-100,ForceMode.VelocityChange);
 		Destroyer.AddTorque(BOSS.transform.forward*5f,ForceMode.Acceleration);
 		Invoke ("Explode",4f);
 		

@@ -10,7 +10,7 @@ public class LaserBehavior : MonoBehaviour
 
 
 
-	void OnTriggerEnter (Collider col)
+	public void OnTriggerEnter (Collider col)
 	{
 		foreach( string tag in tags)
 		{

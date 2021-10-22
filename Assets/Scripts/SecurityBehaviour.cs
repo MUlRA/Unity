@@ -66,7 +66,7 @@ public class SecurityBehaviour : MonoBehaviour
 		{
 			if(col.tag == tag)
 			{
-				Health -= HealthNBoosterManager.Instance.Power;
+				Health -= WeaponAndAccessories.Instance.Power;
 				Invoke ("Shake",0);
 				if (shake_intensity > 0)
 				{

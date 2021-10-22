@@ -26,8 +26,9 @@ public class CrystalBehaviour: MonoBehaviour
 	void OnTriggerEnter (Collider col)
 	{
 				foreach (string tag in Tags) {
-						if (col.tag == "PlayerBullets") {
-				Health -= HealthNBoosterManager.Instance.Power;
+						if (col.tag == "PlayerBullets") 
+			{
+				Health -= WeaponAndAccessories.Instance.Power;
 								if (Health <= 0) {
 										//Death animation
 										Invoke ("Death", 0);

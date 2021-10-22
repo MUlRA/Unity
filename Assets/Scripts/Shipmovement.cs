@@ -29,19 +29,15 @@ public class Shipmovement : MonoBehaviour
 	public string [] tags;
 	public string collisionTag = "Ground";
 	public int invert= -1; //Neg for invert, pos for not
-	public Rigidbody bullet;
-	public Rigidbody bomb;
-	public float velocity = 10.0f;
 	public float BankLag = 1.0f;
 	public GameObject SmokeTrail;
 	public int LoadoutModifier;
-	private float bombAmount = -1.0f;
+
 
 
 	// Update is called once per frame
 	void Update ()
 	{
-
 		float horizontal = Input.GetAxis ("Horizontal");
 		float vertical = Input.GetAxis ("Vertical");
 		float bankAxis = Input.GetAxis ("Horizontal");
@@ -72,15 +68,13 @@ public class Shipmovement : MonoBehaviour
 
 		if (Input.GetButtonDown ("Fire1")) 
 		{
-			Rigidbody newBullet = Instantiate (bullet, transform.position, transform.rotation) as Rigidbody;
-			newBullet.AddForce (transform.forward * velocity, ForceMode.VelocityChange);
+			WeaponAndAccessories.Instance.Fire(LoadoutModifier);
 		}
 		
 		if (Input.GetButtonDown ("Fire2")&& (HealthNBoosterManager.Instance.currentBomb> 0)) 
 		{
-			Rigidbody newBomb = Instantiate (bomb, transform.position, transform.rotation) as Rigidbody;
-			newBomb.AddForce (transform.forward * 2000, ForceMode.VelocityChange);
-			HealthNBoosterManager.Instance.Bombs(bombAmount);
+			WeaponAndAccessories.Instance.FireBomb( );
+
 		}
 		if (Input.GetButtonDown ("Jump") && HealthNBoosterManager.Instance.isTired == false)
 		{
@@ -91,15 +85,8 @@ public class Shipmovement : MonoBehaviour
 				movementSpeed = 750.0f;	
 		}
 	}
-	public void OnTriggerEnter  (Collider Col)
+	public void Knockback()
 	{
-		foreach( string tag in tags)
-		{
-			if(Col.tag == tag)
-			{
-				CameraFollow.Instance.IsHit ();
-				Debug.Log ("got hit!");
-			}
-		}
+
 	}
 }

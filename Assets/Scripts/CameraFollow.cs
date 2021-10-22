@@ -102,13 +102,14 @@ public class CameraFollow : MonoBehaviour
 			shake_intensity -= shake_decay;
 		}
 	}
-	public void IsHit ()
+	public void IsHit (float damageAmount)
 	{
-		Debug.Log ("Ishit!!");
 		originPosition = transform.position;
 		originRotation = transform.rotation;
-		shake_intensity = 0.05f;
+		shake_intensity = damageAmount/3;
 		shake_decay = 0.02f;
+		Debug.Log ("Is hit, shake for" +shake_intensity +"!!");
+
 		if (shake_intensity > 0)
 		{
 			transform.position = originPosition + Random.insideUnitSphere * shake_intensity;

@@ -26,7 +26,6 @@ public class HealthNBoosterManager : MonoBehaviour
 	}
 	public string healthDisplayTag = "Health";
 	public string staminaDisplayTag = "Stamina|Mana";
-	public float Power = 1;
 	public float maxHealth = 1;
 	public float currentHealth;
 	public float maxStamina = 10.0f;
@@ -45,6 +44,7 @@ public class HealthNBoosterManager : MonoBehaviour
 	private GameObject HeadsUp;
 	public GameObject gib;
 	public GameObject Smoke;
+	public GameObject Burningsmoke;
 	public GameObject playerDamageSound;
 	public GameObject playerDeathSound;
 	public float damageCooldown = 1.5f;
@@ -80,7 +80,9 @@ public class HealthNBoosterManager : MonoBehaviour
 		if (damageCooldownTimer <= 0 && isCutscene == false) 
 		{
 			currentHealth -= damageAmount;
-			Debug.Log (damageAmount + " ship got hit. " +currentHealth + "HP");
+			Debug.Log (damageAmount + " Damage taken! " +currentHealth + "HP Left.");
+			CameraFollow.Instance.IsHit (damageAmount);
+
 			{
 				if (damageAmount <= 0.0f)
 				{
@@ -104,8 +106,10 @@ public class HealthNBoosterManager : MonoBehaviour
 					ship.AddTorque (player.transform.right * 300, ForceMode.VelocityChange);
 					Invoke ("Explode", 1.0f);
 				}
+				if (currentHealth <=1)
+				{
 
-
+ 				}
 			}
 			//Instantiate(playerDamageSound,player.transform.position,player.transform.rotation);
 			healthDisplay.localScale = new Vector3 (healthDisplay.localScale.x, healthOriginalYscale * (currentHealth / maxHealth), healthDisplay.localScale.x);

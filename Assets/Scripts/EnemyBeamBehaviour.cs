@@ -33,6 +33,7 @@ public class EnemyBeamBehaviour : MonoBehaviour
 		{
 			Instantiate(Spark,transform.position,Random.rotation);
 			HealthNBoosterManager.Instance.DamagedPlayer(damageAmount);
+
 			Invoke ("DestroyNow",0);
 		}
 	}
