@@ -11,6 +11,7 @@ public class MinesBehaviour : MonoBehaviour
 	public string [] tags;
 	public string collisionTag = "Player";
 	public string BombTag = "Bomb";
+	public string EnemyTag = "Enemy";
 	private GameObject target;
 
 	// Use this for initialization
@@ -32,7 +33,7 @@ public class MinesBehaviour : MonoBehaviour
 		{
 			if(col.tag == tag)
 			{
-				Health -= WeaponAndAccessories.Instance.Power;
+				Health -= Weapons.Instance.Power;
 				if (Health <= 0)
 				{
 					//Death animation
@@ -50,6 +51,10 @@ public class MinesBehaviour : MonoBehaviour
 		if (col.tag == BombTag) 
 		{
 			Invoke ("SelfDestruct",0);
+		}
+		if (col.tag == EnemyTag)
+		{
+			Invoke("SelfDestruct", 0);
 		}
 	}
 	void SelfDestruct()

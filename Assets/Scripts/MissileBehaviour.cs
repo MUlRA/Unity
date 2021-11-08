@@ -5,6 +5,7 @@ public class MissileBehaviour : MonoBehaviour
 {
 	public string [] tags;
 	public string collisionTag = "Player";
+	public string BulletTag = "PlayerBullets";
 	public string BombTag = "Bomb";
 	public float speed = 1.0f;
 	public float Health = 2.0f;
@@ -46,14 +47,19 @@ public class MissileBehaviour : MonoBehaviour
 	{
 		foreach( string tag in tags)
 		{
-			if(col.tag == tag)
+			if(col.tag == BulletTag)
 			{
-				Health -= WeaponAndAccessories.Instance.Power;
+				Health -= Weapons.Instance.Power;
 				if (Health <= 0)
 				{
 					//Death animation
 					Invoke ("SelfDestruct",0);
 				}
+			}
+			if (col.tag == tag)
+			{
+				//Death animation
+				Invoke("SelfDestruct", 0);
 			}
 		}
 		if(col.tag == collisionTag)

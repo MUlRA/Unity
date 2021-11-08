@@ -4,9 +4,7 @@ using System.Collections;
 public class CameraShake : MonoBehaviour 
 {
 	public static CameraShake Instance;
-
 	private float _amplitude = 0.1f;
-
 	private Vector3 InitialPos;
 	private bool isShaking = false;
 

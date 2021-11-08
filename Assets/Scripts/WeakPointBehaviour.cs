@@ -36,7 +36,7 @@ public class WeakPointBehaviour : MonoBehaviour
 			Instantiate (Unlock, transform.position, Quaternion.identity);
 			if (col.tag == collisionTag) 
 			{
-				currentHealth -= WeaponAndAccessories.Instance.Power;
+				currentHealth -= Weapons.Instance.Power;
 				if (currentHealth <= 0) 
 				{
 					droneDestroyerBehaviour.enabled = false;
@@ -69,6 +69,6 @@ public class WeakPointBehaviour : MonoBehaviour
 	void Explode()
 	{
 		Instantiate (Explosion, BOSS.transform.position, Quaternion.identity);
-		Destroy(BOSS);
+		Destroy(BOSS,2f);
 	}
 }

@@ -82,7 +82,7 @@ public class AA_MissileLauncher : MonoBehaviour
 		{
 			if(col.tag == tag)
 			{
-				Health -= WeaponAndAccessories.Instance.Power;
+				Health -= Weapons.Instance.Power;
 				if (Health <= 0)
 				{
 					//Death animation

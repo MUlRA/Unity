@@ -19,7 +19,7 @@ public class TurretBehaviour : MonoBehaviour
 	{
 	if (col.tag == collisionTag)
 		{
-			currentHealth -=WeaponAndAccessories.Instance.Power;
+			currentHealth -=Weapons.Instance.Power;
 			if (currentHealth <= 0)
 			{
 

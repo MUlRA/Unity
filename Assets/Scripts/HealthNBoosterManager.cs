@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HealthNBoosterManager : MonoBehaviour 
@@ -31,6 +32,7 @@ public class HealthNBoosterManager : MonoBehaviour
 	public float maxStamina = 10.0f;
 	public float StaminaRegen = 10.0f;
 	private float currentStamina;
+	private float StamCooldown;
 	public float maxBomb = 3.0f;
 	public float currentBomb = 1.0f;
 	public Transform healthDisplay;
@@ -72,6 +74,7 @@ public class HealthNBoosterManager : MonoBehaviour
 		staminaDisplay = GameObject.FindGameObjectWithTag(staminaDisplayTag).transform;
 		healthOriginalYscale = healthDisplay.localScale.y; 
 		staminaOriginalYscale = staminaDisplay.localScale.y;
+		ReticleAutoSwap.Instance.ReticleSwap();
 		Debug.Log (currentHealth);
 	}
 
@@ -97,13 +100,14 @@ public class HealthNBoosterManager : MonoBehaviour
 					HeadsUp.SetActive (false);
 					Reticle.SetActive (false);
 					isTired = true;
+					isCutscene = true;
 					ship.isKinematic = false;
 					//pushdown
-					ship.AddForce (player.transform.up * -500, ForceMode.VelocityChange);
+					ship.AddForce (player.transform.up * -300, ForceMode.VelocityChange);
 					//pushback
-					ship.AddForce (player.transform.forward * -200, ForceMode.VelocityChange);
+					ship.AddForce (player.transform.forward * -300, ForceMode.VelocityChange);
 					//try to fucking rotate
-					ship.AddTorque (player.transform.right * 300, ForceMode.VelocityChange);
+					ship.AddTorque (player.transform.right * 150, ForceMode.VelocityChange);
 					Invoke ("Explode", 1.0f);
 				}
 				if (currentHealth <=1)
@@ -128,9 +132,11 @@ public class HealthNBoosterManager : MonoBehaviour
 		}
 
 	void Reload ()
-	{
+    {
+		int scene = SceneManager.GetActiveScene().buildIndex;
+		SceneManager.LoadScene(scene, LoadSceneMode.Single);
 
-		Application.LoadLevel(Application.loadedLevel);
+		//Application.LoadLevel(Application.loadedLevel);
 	
 	}
 
@@ -183,18 +189,27 @@ public class HealthNBoosterManager : MonoBehaviour
 
 	void Update ()
 	{
-	currentStamina += StaminaRegen *Time.deltaTime;
-			
-		if (currentStamina > maxStamina)
+		currentStamina += StaminaRegen * Time.deltaTime;
+		StamCooldown -= Time.deltaTime;
+	
+		if (currentStamina > maxStamina) 
+		{
 			currentStamina = maxStamina;
-
-		if (currentStamina < 0.05)
+		}
+		if (currentStamina <= 0) 
 		{
 			isTired = true;
+			StamCooldown = 1f;
 		} 
+		if (StamCooldown >= 0)
+		{
+			isTired = true;
+		}
+
 		else
 		{
 			isTired = false;
+			StamCooldown =0;
 		}
 
 		if (Input.GetButton ("Jump") && isTired == false)

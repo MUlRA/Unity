@@ -69,18 +69,20 @@ public class CameraFollow : MonoBehaviour
 			}
 
 		}
-		float tiltAroundZ = Input.GetAxis("Horizontal") * -tiltAngle;
-		float tiltAroundX = Input.GetAxis("Vertical") * tiltAngle;
-		Quaternion target = Quaternion.Euler( tiltAroundX, 0, tiltAroundZ);
-		transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime);
+		if (HealthNBoosterManager.Instance.isCutscene == false)
+		{
+			float tiltAroundZ = Input.GetAxis ("Horizontal") * -tiltAngle;
+			float tiltAroundX = Input.GetAxis ("Vertical") * tiltAngle;
+			Quaternion target = Quaternion.Euler (tiltAroundX, 0, tiltAroundZ);
+			transform.rotation = Quaternion.Slerp (transform.rotation, target, Time.deltaTime);
 
 
-		Vector3 newPosition = objectToFollow.position;
-		newPosition.x *= movementRatio.x;
-		newPosition.y *= movementRatio.y;
-		newPosition.z = transform .position.z;
-		transform .position = newPosition;
-
+			Vector3 newPosition = objectToFollow.position;
+			newPosition.x *= movementRatio.x;
+			newPosition.y *= movementRatio.y;
+			newPosition.z = transform .position.z;
+			transform .position = newPosition;
+		}
 	}
 
 	//shake

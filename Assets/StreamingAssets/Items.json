@@ -1,0 +1,43 @@
+[
+	{
+		"id": 0,
+		"title": "Scatter Muzzle",
+		"value": 5000,
+		"stats": {
+			"loadoutmodifier":1,
+			"speed":"0.5",
+			"survivability":"1.0"
+		},
+		"description": "A Heavy part made to propulse multiple ordnance that scatter on impact.",
+		"stackable":false,
+		"slug":"scatter_muzzle"
+	},	
+	{	
+		"id": 1,
+		"title": "Prism Muzzle",
+		"value": 9999,
+		"stats": {
+			"loadoutmodifier":2,
+			"speed":"1.0",
+			"survivability":"0.5"
+		},
+		"description": "A Prism held by fragile parts made to generated twin destructive beams.",
+		"stackable":false,
+		"slug":"prism_muzzle"
+	},
+	{	
+		"id": 2,
+		"title": "Health Pack",
+		"value": 1000,
+		"stats": {
+			"loadoutmodifier":-1,
+			"speed":"0.3",
+			"survivability":"2"
+		},
+		"description": "A compact kit containing essential life-saving materials.",
+		"stackable":true,
+		"slug":"Health_pack"
+	}
+
+
+]
